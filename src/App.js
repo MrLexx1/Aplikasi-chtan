@@ -42,21 +42,28 @@ const Chat = () => {
   return (
     <div>
       <h1>Chatbot</h1>
-      <ul>
-        {messages.map((message, index) => (
-          <li key={index}>
-            <span style={{ color: message.sender === "user" ? "blue" : "red" }}>
-              {message.sender}: {message.text}
-            </span>
-          </li>
-        ))}
-      </ul>
-      <input
-        type="text"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-      />
-      <button onClick={sendMessage}>Kirim</button>
+      <div className="chat-container">
+        <div className="chat-messages">
+          {messages.map((message, index) => (
+            <div
+              key={index}
+              className={`message ${
+                message.sender === "user" ? "user-message" : "bot-message"
+              }`}
+            >
+              <span>{message.text}</span>
+            </div>
+          ))}
+        </div>
+        <div className="chat-input">
+          <input
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <button onClick={sendMessage}>Kirim</button>
+        </div>
+      </div>
     </div>
   );
 };
