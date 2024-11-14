@@ -7,7 +7,7 @@
 .chat-container {
   width: 300px;
   height: 400px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   padding: 10px;
 }
 
@@ -35,14 +35,14 @@
 
 .chat-input {
   padding: 10px;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #cccccc;
 }
 
 input[type="text"] {
   width: 80%;
   height: 30px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
 }
 
 button {
@@ -50,11 +50,11 @@ button {
   height: 30px;
   padding: 10px;
   border: none;
-  background-color: #4caf50;
+  background-color: #4caf4f;
   color: #fff;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0057b3;
 }
